@@ -1,0 +1,17 @@
+body {
+  margin: 7%;
+}
+
+img, .jumbotron {
+  float: left;
+}
+
+img {
+  width: 30%;
+  margin-right: 2%;
+  margin-left: 11%;
+}
+
+.jumbotron {
+  width: 50%;
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Cass House Coffee</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto+Condensed&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="clearfix">
+  <!-- <a href="/"><img src="img/rc.png" class="floatLeft"></a> -->
+
+    <div class="floatLeft">
+      <div class="title floatLeft">
+        <h1 class="floatLeft">Cass House Coffee: <span class="date"></span></h1>
+      </div>
+      <div class="login floatLeft">
+        <h2>Welcome, <%= user.local.email %></h2>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        <% if (user.local.email) { %>
+        <a href="/unlink/local" class="btn btn-default">Unlink</a>
+        <% } else { %>
+        <a href="/connect/local" class="btn btn-default">Connect Local</a>
+        <% } %>
+      </div>
+
+  </header>
+
+  <section class="container">
+    <h4>Completed Orders:</h4>
+    <section class="team floatLeft">
+      <span><i class="fas fa-square" style="color: #2E86C1"></i></span>
+      <h4><%= user.local.email %></h4>
+      <ul>
+        <% for(var b=0; b<barista.length; b++) {%>
+        <% if (barista[b].assign === user.local.email) { %>
+        <li><%=barista[b].customer%><span> | <%= barista[b].order %></span></li>
+        <% } %>
+        <% } %>
+      </ul>
+    </section>
+
+    <section class="tasks floatLeft clearfix">
+      <ul>
+        <% for(var i=0; i<barista.length; i++) {%>
+        <% if (barista[i].completed === "no") { %>
+        <li class="message floatLeft">
+          <h4 class="floatLeft nameDisplay"><%= barista[i].customer %></h4>
+          <span>Cancel:</span>
+          <span><i class="far fa-times-circle"></i></span>
+
+          <p><%= barista[i].order %></p>
+          <button type="button" name="button" class="reassign"><span>COMPLETED</span><span class="hide"><%= user.local.email %></span></button>
+        </li>
+        <%}%>
+        <% } %>
+      </ul>
+    </section>
+  </section>
+  <script src="main.js"></script>
+
+</body>
+
+</html>

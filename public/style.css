@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+}
+ body {
+   background-image: url('image/coffee.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   padding: 4% 10%;
+   line-height: 1;
+   font-size: 18px;
+   font-family: 'Roboto Condensed', sans-serif;
+   word-wrap: break-word;
+ }
+
+ blockquote, q {
+   quotes: none;
+ }
+
+ blockquote:before, blockquote:after,
+ q:before, q:after {
+   content: '';
+   content: none;
+ }
+
+ table {
+   border-collapse: collapse;
+   border-spacing: 0;
+ }
+
+ /* CLEARFIX TRICK */
+ .clearfix:after {
+   content: ".";
+   display: block;
+   clear: both;
+   visibility: hidden;
+   line-height: 0;
+   height: 0;
+ }
+
+ .floatLeft {
+   float: left;
+   color: white;
+ }
+
+ /******************************************
+  /* BASE STYLES
+  /*******************************************/
+ header {
+   width: 100%;
+   background-size: 100%;
+   background-repeat: none;
+   margin-bottom: 35px;
+ }
+
+ header img {
+   width: 15%;
+   margin-right: 3%;
+ }
+
+ header div {
+   width: 80%;
+ }
+
+ h1 {
+   margin-left: 2%;
+   font-size: 45px;
+   color: white;
+   text-align: center;
+ }
+
+ .title {
+   width: 80%;
+ }
+
+ .login {
+   width: 20%;
+ }
+
+ .title, .login {
+   padding-top: 30px;
+ }
+
+ /******************************************
+ /* PROFILE PAGE
+ /*******************************************/
+ h2 {
+   text-align: right;
+   margin-bottom: 10px;
+ }
+
+ .jumbotron{
+  background-color:inherit;
+ }
+
+ .order {
+   color:white;
+   background-color:inherit;
+   padding: 1px;
+   font-family: inherit;
+   font-size: inherit;
+   line-height: inherit;
+   margin-left: 35%;
+   border-radius: 10%;
+   width: 26%;
+ }
+
+ .btn {
+  border: none;
+ padding: 0;
+ background-color: inherit;
+ }
+
+ .btn-sm {
+   margin-left: 17%;
+ }
+
+ h1, h2, .welcome, .btn {
+   text-transform: uppercase;
+ }
+
+ form {
+   clear: both;
+   width: 100%;
+   padding-top: 30px;
+ }
+
+ select, header button, input {
+   float: left;
+   margin-right: 1%;
+   margin-bottom: 50px;
+   padding: 10px;
+   border: 2px solid #7D6608;
+   border-radius: 6px;
+   overflow: hidden;
+   position: relative;
+   font-size: 20px;
+   font-family: 'Roboto Condensed', sans-serif;
+ }
+
+ input {
+   margin-left: 1%;
+   padding-left: 10px;
+   margin-top: 105px;
+   width: 30%;
+ }
+
+
+ select {
+   height: 46px;
+ }
+
+ h4 {
+   font-family: 'Lobster', cursive;
+   color: white;
+ }
+
+ .container {
+   margin: 0;
+   width: 100%;
+ }
+
+ .team {
+   width: 25%;
+ }
+
+ .fa-square {
+   float: left;
+   font-size: 12px;
+   padding-top: 5px;
+   margin-right: 5px;
+ }
+
+ .team h4 {
+   margin-bottom: 10px;
+   float: left;
+ }
+
+ .team ul {
+   margin-bottom: 25px;
+   clear: both;
+ }
+
+ .team li {
+   margin-left: 10%;
+   list-style: none;
+ }
+
+ .tasks {
+   width: 75%;
+ }
+
+ ul {
+   width: 100%;
+ }
+
+ .tasks li {
+   background-image: url("images/paper.png");
+   background-size: cover;
+   width: 32%;
+   border: 2px solid #000;
+   border-radius: 5%;
+   padding: 3% 1%;
+   margin: 0 0 30px 1%;
+   list-style-type: none;
+ }
+
+ .tasks li p {
+   padding-bottom: 20px;
+   border-bottom: 1px solid #000;
+   margin: 25px 0;
+   text-align: center;
+   font-size: 35px;
+ }
+
+ .tasks li span {
+   text-align: right;
+ }
+
+ .tasks p~span {
+   font-size: 16px;
+ }
+
+ .nameDisplay {
+   display: block;
+   width: 68%;
+ }
+
+ i {
+   margin-left: 5px;
+   font-size: 16px;
+ }
+
+ .fa-times-circle {
+   font-size: 18px;
+ }
+
+ .tasks button {
+   margin: 0 0 5px 5px;
+   padding: 5px;
+   font-size: 14px;
+ }
+
+ .hide {
+   display: none;
+ }
